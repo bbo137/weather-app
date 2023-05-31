@@ -66,11 +66,9 @@ function listerner() {
     loading.src = '../resources/my-loader.svg';
     loading.classList.add('loading');
     content.appendChild(loading);
-    console.log(location);
     const weather = getWeather(location);
     weather.then((result) => {
       if (result) {
-        console.log(result);
         displayWeather(result);
       }
     });
